@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public String userSignup(SignupForm signup) {
 
-		UserDetails userEmail = repo.findByemail(signup.getEmail());
+		UserDetails userEmail = repo.findByEmail(signup.getEmail());
 
 		if (userEmail != null) {
 			return "Choose unique email";
@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean unlockAccount(UnlockForm form) {
 
-		UserDetails entity = repo.findByemail(form.getEmail());
+		UserDetails entity = repo.findByEmail(form.getEmail());
 
 		if (entity != null && entity.getPassword().equals(form.getTempPwd())) {
 
@@ -111,7 +111,7 @@ public class UserServiceImpl implements UserService {
 	public boolean forgotPassword(String email) {
 		// check record presence in db with given email
 
-		UserDetails entity = repo.findByemail(email);
+		UserDetails entity = repo.findByEmail(email);
 
 		// if record is not avaliable send error msg
 

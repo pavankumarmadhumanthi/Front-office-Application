@@ -12,7 +12,7 @@ import com.ashokit.entity.UserDetails;
 
 public interface UserDetailsRepo extends JpaRepository<UserDetails, Integer> {
 	
-	public UserDetails findByemail(String email);
+	public UserDetails findByEmail(String email);
 	
 	public Optional<UserDetails> findByUserId(Integer userId);
 	

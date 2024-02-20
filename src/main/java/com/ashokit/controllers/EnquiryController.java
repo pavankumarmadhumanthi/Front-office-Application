@@ -122,7 +122,6 @@ public class EnquiryController {
 		Optional<StudentEnquiry> editEnquiry = repo.findById(enquiryId);
 
 		if (editEnquiry.isPresent()) {
-
 			StudentEnquiry studentEnquiryForm = editEnquiry.get();
 
 			model.addAttribute("add", studentEnquiryForm);

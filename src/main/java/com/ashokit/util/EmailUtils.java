@@ -23,7 +23,6 @@ public class EmailUtils {
 			MimeMessageHelper helper = new MimeMessageHelper(mimeMsg, true);
 			helper.setTo(to);
 			helper.setSubject(subject);
-			// "Link:",
 			helper.setText(body, true);
 
 			mailSender.send(mimeMsg);

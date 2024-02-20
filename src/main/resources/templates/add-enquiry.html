@@ -67,13 +67,13 @@
 										
 										<div class="form-outline mb-4">
 											<input type="text" id="form2Example11" class="form-control"
-												placeholder="Student Name" th:field="*{studentName}"/> <label class="form-label"
+												placeholder="Student Name" th:field="*{studentName}" required/> <label class="form-label"
 												for="form2Example11" >Student Name</label>
 										</div>
 
 										<div class="form-outline mb-4">
 											<input type="text" id="form2Example22" class="form-control"
-												placeholder="Student Name"  th:field="*{studentNumber}"/> <label class="form-label"
+												placeholder="Student Name"  th:field="*{studentNumber}" required/> <label class="form-label"
 												for="form2Example22">Contact Number</label>
 										</div>
 										
@@ -96,7 +96,7 @@
 											<label class="form-label" for="form2Example23">Class
 												Mode</label>
 												
-											<select id="form2Example23" class="form-select" th:field="*{classMode}">
+											<select id="form2Example23" class="form-select" th:field="*{classMode}" required>
 											  <option value="select">-Select-</option>
 											  <option value="online">Online</option>
 											  <option value="classroom">Classroom</option>
@@ -109,7 +109,7 @@
 
 										<div class="form-outline mb-4">
 											<label class="form-label" for="form2Example24" >Course</label>
-											<select id="form2Example24" class="form-select"  th:field="*{course}">
+											<select id="form2Example24" class="form-select"  th:field="*{course}" required>
 												<option value="select">-Select-</option>
    									 <option th:each="course : ${courses}" th:value="${course}" th:text="${course}"></option>
 											</select>
